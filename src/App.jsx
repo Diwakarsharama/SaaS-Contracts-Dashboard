@@ -5,7 +5,7 @@ import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard.jsx";
 import ContractDetail from "./pages/ContactDetail.jsx";
 import NotFound from "./pages/NotFound.jsx";
-import Layout from "./components/Layout.jsx" ;
+// import Layout from "./components/Layout.jsx" ;
 
 function RequireAuth({ children }) {
 const token = localStorage.getItem("mock_jwt");

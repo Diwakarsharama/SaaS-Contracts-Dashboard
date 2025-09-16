@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import jsPDF from "jspdf";
+// import jsPDF from "jspdf";
 
 export default function ContractDetail() {
   const { id } = useParams();
@@ -91,13 +91,13 @@ export default function ContractDetail() {
             </div>
             <div className="bg-white p-4 rounded shadow text-sm text-slate-600">
               <div>Actions</div>
-              <a
+              {/* <a
               href={`/contracts/${id}.pdf`}
               download
               className="mt-2 px-3 py-1 rounded border inline-block"
             >
               Download PDF
-            </a>
+            </a> */}
             </div>
           </aside>
         </div>
