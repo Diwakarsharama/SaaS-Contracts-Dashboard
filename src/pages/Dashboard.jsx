@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
 import usePagination from "../hooks/usePagination";
 import UploadModal from "../components/uploadModel";
-import Layout from "../components/Layout"; // <-- import Layout
+import Layout from "../components/Layout"; //
 
 function statusMatches(item, statusFilter) {
   if (!statusFilter) return true;
