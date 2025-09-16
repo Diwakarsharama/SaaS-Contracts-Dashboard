@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
+import jsPDF from "jspdf";
 
 export default function ContractDetail() {
   const { id } = useParams();
@@ -10,6 +11,7 @@ export default function ContractDetail() {
   const contract = all ? all.find(c => String(c.id) === String(id)) : null;
   // For richer detail (clauses, insights, evidence) create a file public/contracts/c1.json and fetch it:
   // const { data: detail } = useFetch(`/contracts/${id}.json`, [id]);
+  
 
   if (loading) return <div className="p-8">Loading...</div>;
   if (error) return <div className="p-8 text-red-600">Error loading contract</div>;
@@ -89,7 +91,13 @@ export default function ContractDetail() {
             </div>
             <div className="bg-white p-4 rounded shadow text-sm text-slate-600">
               <div>Actions</div>
-              <button className="mt-2 px-3 py-1 rounded border">Download PDF</button>
+              <a
+              href={`/contracts/${id}.pdf`}
+              download
+              className="mt-2 px-3 py-1 rounded border inline-block"
+            >
+              Download PDF
+            </a>
             </div>
           </aside>
         </div>
